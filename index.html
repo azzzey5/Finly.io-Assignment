@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Finly.io Assignment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/6dc71dfee7.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="res/tile.css">
+    <link rel="stylesheet" href="res/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-shadow">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="https://www.finly.io/common/images/logos/logo_black_xs.png"></a>
+            </div>
+            <h4 class="nav-title">Coding Assignment</h4>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top:50px">
+        <h3>An easy way to manage your paper receipts.</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn  available-receipts" onclick="showall()">Available Receipts</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn  new-receipts" onclick="upload()">Upload New Receipts</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="uploader" id="uploader" style="display: none;">
+                <form id='file-catcher'>
+                    <label class="boxuploader" for="file-input">
+			      	 <div class="uploadHolder" id="uploadHolder">
+			      	 	<i class="fa fa-cloud-upload fa-5x" aria-hidden="true"></i><br />
+			      	 	<span class="title">Click here to upload your file(s)!</span><br />
+			      	 	<!-- <img class="image" src="https://i.imgur.com/HVNdiOf.jpg"> -->
+			      	 </div>
+					  <input id='file-input' class="hidden" type='file' name='receipt[image]' multiple/>
+					  <button type='submit' class="uploadButton">
+					    Upload file(s)!
+					  </button>
+		  		</label>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="tiles" id="tiles">
+            </ul>
+        </div>
+        <div class="row" style="display: none;">
+            <input type="file" id="myFile2" class="hidden" name='receipt[image]'>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="res/main.js"></script>
+</body>
+
+</html>
